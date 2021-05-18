@@ -107,7 +107,7 @@ class QrCode
     public function render()
     {
         $qrcode = new \Endroid\QrCode\QrCode();
-        $qrcode->setErrorCorrectionLevel(ErrorCorrectionLevel::HIGH);
+        $qrcode->setErrorCorrectionLevel(new ErrorCorrectionLevel(ErrorCorrectionLevel::HIGH));
         $qrcode->setEncoding('UTF-8');
         $qrcode->setForegroundColor(array('r' => 0, 'g' => 0, 'b' => 0, 'a' => 0));
         $qrcode->setBackgroundColor(array('r' => 255, 'g' => 255, 'b' => 255, 'a' => 0));
