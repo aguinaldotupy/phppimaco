@@ -32,26 +32,25 @@ class Barcode
         $this->width = 2;
         $this->height = 30;
         $this->align = 'left';
+    }
+
+    /**
+     * @param int|float $width
+     * @return $this
+     */
+    public function setWidth($width)
+    {
+        $this->width = (int)$width;
         return $this;
     }
 
     /**
-     * @param float $width
+     * @param float|int $height
      * @return $this
      */
-    public function setWidth(float $width)
+    public function setHeight($height)
     {
-        $this->width = $width;
-        return $this;
-    }
-
-    /**
-     * @param float $height
-     * @return $this
-     */
-    public function setHeight(float $height)
-    {
-        $this->height = $height;
+        $this->height = (int) $height;
         return $this;
     }
 
